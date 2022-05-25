@@ -1,0 +1,26 @@
+{
+  "name": "warehousing-services",
+  "version": "1.0.0",
+  "description": "The MPA Warehousing services for the diploma.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node ./src/index.js --inspect",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ar1esMax1m/Warehousing-services.git"
+  },
+  "author": "kalininmn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ar1esMax1m/Warehousing-services/issues"
+  },
+  "homepage": "https://github.com/Ar1esMax1m/Warehousing-services#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "node": "^17.7.2",
+    "path": "^0.12.7"
+  }
+}
