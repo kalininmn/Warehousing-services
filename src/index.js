@@ -25,7 +25,8 @@ app.use(express.json());
 app.use(cookieParser());
 // app.use(middleware);
 app.use('/css', express.static(`${rootPath}/styles/css`));
-app.use('/file/src/assets/', express.static('./src/assets'));
+app.use('/assets', express.static(`${rootPath}/assets`));
+app.use('/utils', express.static(`${rootPath}/utils`));
 
 app.use(MainAPI);
 app.use(TariffAPI);
