@@ -1,4 +1,9 @@
 /* helpers */
+body {
+  padding-top: 160px;
+  padding-left: 20%;
+  display: flex;
+}
 .nav-link {
   display: flex;
   align-items: center;
@@ -22,6 +27,10 @@
 /* --- */
 
 .wrapper-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -35,6 +44,8 @@
       justify-content: space-between;
       align-items: center;
       .wrapper-logo {
+        border-radius: 50px;
+        margin-left: 5px;
         width: 100px;
         height: 100px;
         overflow: hidden;
@@ -63,11 +74,11 @@
 .wrapper-aside {
   width: 20%;
   height: calc(100vh - 160px);
-  margin: auto;
+  position: fixed;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  float: left;
   background-color: fuchsia;
   .nav-link {
     padding: 20px 5px;
@@ -75,9 +86,8 @@
 }
 
 .wrapper-main {
-  width: 80%;
-  height: calc(100vh - 160px);
-  margin: auto;
-  float: right;
+  width: 100%;
+  min-height: calc(100vh - 160px);
+  right: 0;
   background-color: cornflowerblue;
 }
