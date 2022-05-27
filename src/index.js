@@ -1,10 +1,10 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const path = require('path');
+const bodyParser = require('body-parser');
 
-// import middleware from './utils/Middleware.js';
 global.rootPath = path.resolve(__dirname);
-
+const AuthenticationAPI = require('./API/AuthenticationAPI.js');
 const MainAPI = require('./API/MainAPI.js');
 const TariffAPI = require('./API/TariffAPI.js');
 const AboutCompanyAPI = require('./API/AboutCompanyAPI.js');
@@ -21,13 +21,16 @@ const BenefitsAPI = require('./API/BenefitsAPI.js');
 const app = express();
 const port = 8082;
 
-app.use(express.json());
+// app.use(express.json());
 app.use(cookieParser());
-// app.use(middleware);
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/css', express.static(`${rootPath}/styles/css`));
 app.use('/assets', express.static(`${rootPath}/assets`));
 app.use('/utils', express.static(`${rootPath}/utils`));
+app.use('/scripts', express.static(`${rootPath}/scripts`));
 
+app.use(AuthenticationAPI);
 app.use(MainAPI);
 app.use(TariffAPI);
 app.use(AboutCompanyAPI);
