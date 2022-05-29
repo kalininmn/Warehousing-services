@@ -17,7 +17,6 @@ const ServicesAPI = require('./API/ServicesAPI.js');
 const DocumentsAPI = require('./API/DocumentsAPI.js');
 const BenefitsAPI = require('./API/BenefitsAPI.js');
 
-
 const app = express();
 const port = 8082;
 
