@@ -4,30 +4,31 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная страница</title>
+  <title>Заказать звонок</title>
 
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/orderCall.css">
 </head>
 <body>
   <header class="wrapper-header">
     <div class="wrapper-header-about">
       <div class="wrapper-header-info">
-        <div class="wrapper-logo"><img id="logo"src="#" alt="logo"></div>
+        <div class="wrapper-logo"><img id="logo" src="#" alt="logo"></div>
         <div class="header-info">
           <div class="wrapper-mail"><a href="">Почта</a></div>
           <div class="wrapper-phones">телефоны</div>
         </div>
         <div class="wrapper-header-services">
-          <a href="applicationStorage" class="wrapper-application-storage nav-link">Заявка на хранение</a>
-          <a href="onlineBooking" class="wrapper-online-booking nav-link">Онлайн бронирование</a>
-          <a href="orderCall" class="wrapper-order-call nav-link">Заказать звонок</a>
+          <a href="#" class="wrapper-application-storage nav-link">Заявка на хранение</a>
+          <a href="#" class="wrapper-online-booking nav-link">Онлайн бронирование</a>
+          <a href="orderCall" class="wrapper-order-call nav-link nav-link_active">Заказать звонок</a>
         </div>
       </div>
       <div class="wrapper-header-navigation">
         <a href="/" class="main-link nav-link">Главная</a>
         <a href="tariff" class="tariff-link nav-link">Тарифы</a>
-        <a href="aboutCompany" class="about-company-link nav-link nav-link_active">О компании</a>
+        <a href="aboutCompany" class="about-company-link nav-link">О компании</a>
         <a href="photos" class="photos-link nav-link">Фотографии</a>
         <a href="news" class="news-link nav-link">Новости</a>
       </div>
@@ -44,8 +45,28 @@
     <a href="benefits" class="nav-link">Наши преимущества</a>
   </aside>
 
-  <main class="wrapper-main">основной контент</main>
+  <main class="wrapper-main">
+    <div class="wrapper-text">
+      <div class="wrapper-title"><h2>Заказать звонок</h2></div>
+      <div class="wrapper-description">
+        <span>
+          Оставьте Ваш номер телефона и ожидайте звонка нашего менеджера
+        </span>
+      </div>
+    </div>
+
+    <div class="wrapper-form">
+      <form onsubmit="submitForm(event)" class="form">
+        <div class="form__item">
+          <label for="phone">Телефон</label>
+          <input type="phone" id="phone" name="phone" />
+        </div>
+        <button type="submit">Заказать</button>
+      </form>
+    </div>
+  </main>
 
   <script src="/utils/loadLogo.js"></script>
+  <script src="/scripts/OrderCall.js"></script>
 </body>
 </html>

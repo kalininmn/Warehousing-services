@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн бронирование</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/onlineBooking.css">
+</head>
+<body>
+  <header class="wrapper-header">
+    <div class="wrapper-header-about">
+      <div class="wrapper-header-info">
+        <div class="wrapper-logo"><img id="logo" src="#" alt="logo"></div>
+        <div class="header-info">
+          <div class="wrapper-mail"><a href="">Почта</a></div>
+          <div class="wrapper-phones">телефоны</div>
+        </div>
+        <div class="wrapper-header-services">
+          <a href="#" class="wrapper-application-storage nav-link">Заявка на хранение</a>
+          <a href="onlineBooking" class="wrapper-online-booking nav-link nav-link_active">Онлайн бронирование</a>
+          <a href="#" class="wrapper-order-call nav-link">Заказать звонок</a>
+        </div>
+      </div>
+      <div class="wrapper-header-navigation">
+        <a href="/" class="main-link nav-link">Главная</a>
+        <a href="tariff" class="tariff-link nav-link">Тарифы</a>
+        <a href="aboutCompany" class="about-company-link nav-link">О компании</a>
+        <a href="photos" class="photos-link nav-link">Фотографии</a>
+        <a href="news" class="news-link nav-link">Новости</a>
+      </div>
+    </div>
+    <div class="wrapper-header-schema">тут будет карта</div>
+  </header>
+
+  <aside class="wrapper-aside">
+    <a href="responsibleStorage" class="nav-link">Ответственное хранение</a>
+    <a href="warehouseRent" class="nav-link">Аренда склада</a>
+    <a href="crossDocking" class="nav-link">Кросс-докинг</a>
+    <a href="services" class="nav-link">Услуги</a>
+    <a href="documents" class="nav-link">Документы</a>
+    <a href="benefits" class="nav-link">Наши преимущества</a>
+  </aside>
+
+  <main class="wrapper-main">
+    <div class="wrapper-text">
+      <div class="wrapper-title"><h2>Аренда склада</h2></div>
+    </div>
+
+    <div class="wrapper-form">
+      <form onsubmit="submitForm(event)" class="form">
+        <div class="form__item">
+          <label for="organizationName">Название организации</label>
+          <input type="text" id="organizationName" name="organizationName" />
+        </div>
+        <div class="form__item">
+          <label for="contactPerson">Контактное лицо, должность</label>
+          <input type="text" id="contactPerson" name="contactPerson"/>
+        </div>
+        <div class="form__item">
+          <label for="city">Город</label>
+          <input type="text" id="city" name="city" />
+        </div>
+        <div class="form__item">
+          <label for="mail">Почта</label>
+          <input type="mail" id="mail" name="mail" />
+        </div>
+        <div class="form__item">
+          <label for="place">С какого месяца требуется предоставление услуг</label>
+          <input type="text" name="place" id="place" />
+        </div>
+        <div class="form__item">
+          <label for="time">На какой срок требуется предоставление услуг</label>
+          <input type="text" id="time" name="time" />
+        </div>
+        <div class="form__item">
+          <label for="workingMode">Требуемый режим работы склада</label>
+          <input type="text" id="workingMode" id="workingMode" />
+        </div>
+        <div class="form__item">
+          <label for="productType">Тип товара</label>
+          <input type="text" name="productType" id="productType" />
+        </div>
+        <div class="form__item">
+          <label for="numbersOfTitles">Общее количество наименований (артикулов)</label>
+          <input type="text" name="numbersOfTitles" id="numbersOfTitles" />
+        </div>
+        <div class="form__item">
+          <label for="storageCapacity">Предполагаемый объем хранения (паллетомест)</label>
+          <input type="text" name="storageCapacity" id="storageCapacity" />
+        </div>
+        <div class="form__item">
+          <label for="numbersOfCars">Количество машин (информация по приходящему а/т) в месяц</label>
+          <input type="text" name="numbersOfCars" id="numbersOfCars" />
+        </div>
+        <div class="form__item">
+          <label for="averageQuantity">Среднее количество в 1 машине</label>
+          <input type="text" name="averageQuantity" id="averageQuantity" />
+        </div>
+        <div class="form__item">
+          <label for="maxBoxWeight">Максимальный вес короба, кг.</label>
+          <input type="text" name="maxBoxWeight" id="maxBoxWeight" />
+        </div>
+        <div class="form__item">
+          <label for="numbersOfBox">Количество коробов на паллете, ед. (среднее, максимальное)</label>
+          <input type="text" name="numbersOfBox" id="numberOfBox" />
+        </div>
+        <div class="form__item">
+          <label for="typeBox">Тип используемых паллет (евро 120х80, американская 120х120, финская 120х100)</label>
+          <input type="text" name="typeBox" id="typeBox" />
+        </div>
+        <div class="form__item">
+          <label for="orderStructure">Структура заказов на отгрузку</label>
+          <input type="text" name="orderStructure" id="orderStructure" />
+        </div>
+        <div class="form__item">
+          <label for="additionalServices">Необходимость в дополнительных услугах склада</label>
+          <input type="text" name="additionalServices" name="additionalServices" />
+        </div>
+
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="/utils/loadLogo.js"></script>
+  <script src="/scripts/OnlineBooking.js"></script>
+</body>
+</html>

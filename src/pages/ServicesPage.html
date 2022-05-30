@@ -8,6 +8,11 @@
 
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/services.css">
+
+  <!-- slider -->
+  <link rel="stylesheet" href="./css/slider.css">
+  <script defer src="./scripts/utils/slider.js"></script>
 </head>
 <body>
   <header class="wrapper-header">
@@ -19,9 +24,9 @@
           <div class="wrapper-phones">телефоны</div>
         </div>
         <div class="wrapper-header-services">
-          <a href="#" class="wrapper-application-storage nav-link">Заявка на хранение</a>
-          <a href="#" class="wrapper-online-booking nav-link">Онлайн бронирование</a>
-          <a href="#" class="wrapper-order-call nav-link">Заказать звонок</a>
+          <a href="applicationStorage" class="wrapper-application-storage nav-link">Заявка на хранение</a>
+          <a href="onlineBooking" class="wrapper-online-booking nav-link">Онлайн бронирование</a>
+          <a href="orderCall" class="wrapper-order-call nav-link">Заказать звонок</a>
         </div>
       </div>
       <div class="wrapper-header-navigation">
@@ -44,8 +49,45 @@
     <a href="benefits" class="nav-link">Наши преимущества</a>
   </aside>
 
-  <main class="wrapper-main">основной контент</main>
+  <main class="wrapper-main">
+    <div class="slider">
+      <div class="slider__container">
+        <div class="slider__wrapper">
+          <div class="slider__items">
+            <div class="slider__item">
+              <div class="wrapper-img">
+                <img class="img" src="/assets/logo/logo.jpg" alt="#">
+              </div>
+              <div class="wrapper-text">
+                <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sapiente a unde, eius veniam enim cupiditate mollitia nulla nihil distinctio temporibus vero, dolor accusantium fuga sit nesciunt aspernatur iusto necessitatibus?</span>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="wrapper-img">
+                <img class="img" src="/assets/logo/logo.jpg" alt="#">
+              </div>
+              <div class="wrapper-text">
+                <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sapiente a unde, eius veniam enim cupiditate mollitia nulla nihil distinctio temporibus vero, dolor accusantium fuga sit nesciunt aspernatur iusto necessitatibus?</span>
+              </div>
+            </div>
+            <div class="slider__item">
+              <div class="wrapper-img">
+                <img class="img" src="https://bipbap.ru/wp-content/uploads/2017/04/priroda_kartinki_foto_03.jpg" alt="#">
+              </div>
+              <div class="wrapper-text">
+                <span class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic sapiente a unde, eius veniam enim cupiditate mollitia nulla nihil distinctio temporibus vero, dolor accusantium fuga sit nesciunt aspernatur iusto necessitatibus?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Кнопки для перехода к предыдущему и следующему слайду -->
+      <a href="#" class="slider__control" data-slide="prev"></a>
+      <a href="#" class="slider__control" data-slide="next"></a>
+    </div>
+  </main>
 
   <script src="/utils/loadLogo.js"></script>
+  <script defer src="/scripts/Services.js"></script>
 </body>
 </html>

@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 global.rootPath = path.resolve(__dirname);
 const AuthenticationAPI = require('./API/AuthenticationAPI.js');
 const MainAPI = require('./API/MainAPI.js');
+const ApplicationStorageAPI = require('./API/ApplicationStorageAPI.js');
+const OnlineBookingAPI = require('./API/OnlineBookingAPI.js');
+const orderCallAPI = require('./API/OrderCallAPI.js');
 const TariffAPI = require('./API/TariffAPI.js');
 const AboutCompanyAPI = require('./API/AboutCompanyAPI.js');
 const PhotosAPI = require('./API/PhotosAPI.js');
@@ -16,7 +19,6 @@ const CrossDockingAPI = require('./API/CrossDockingAPI.js');
 const ServicesAPI = require('./API/ServicesAPI.js');
 const DocumentsAPI = require('./API/DocumentsAPI.js');
 const BenefitsAPI = require('./API/BenefitsAPI.js');
-
 
 const app = express();
 const port = 8082;
@@ -32,6 +34,9 @@ app.use('/scripts', express.static(`${rootPath}/scripts`));
 
 app.use(AuthenticationAPI);
 app.use(MainAPI);
+app.use(ApplicationStorageAPI);
+app.use(OnlineBookingAPI);
+app.use(orderCallAPI);
 app.use(TariffAPI);
 app.use(AboutCompanyAPI);
 app.use(PhotosAPI);

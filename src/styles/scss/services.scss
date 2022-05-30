@@ -1,0 +1,33 @@
+/* helpers */
+.slider__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* --- */
+
+.wrapper-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  width: 98%;
+  margin: 2%;
+  .slider__item {
+    max-height: 300px;
+    padding: 2%;
+    .wrapper-img {
+      max-width: 100%;
+      max-height: 80%;
+      overflow: hidden;
+    }
+    .wrapper-text {
+      padding: 2%;
+      background-color: white;
+      max-height: 20%;
+      font-family: 'Roboto', sans-serif;
+    }
+  }
+}
