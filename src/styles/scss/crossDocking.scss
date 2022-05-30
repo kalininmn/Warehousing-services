@@ -1,0 +1,17 @@
+.wrapper-main {
+  .wrapper-list {
+    margin-bottom: 2%;
+  }
+}
+
+.table {
+  margin-left: 4%;
+  margin-bottom: 4;
+  td, th {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+   }
+   th {
+    background: #b0e0e6; /* Цвет фона */
+   }
+}
