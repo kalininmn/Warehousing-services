@@ -1,12 +1,17 @@
 const multiparty = require('multiparty');
+const path = require('path');
+const fs = require('fs');
 
-function parserFormData(req) {
+function parserFormData(req, url) {
   return new Promise((resolve, reject) => {
     const form = new multiparty.Form({
-      uploadDir: './src/assets',
-      // autoFields: true,
-      autoFiles: true,
+      uploadDir: url,
     });
+
+    form.on('file', (name, file) => {
+      const output = path.join(url, name);
+      fs.rename(file.path, output+'.pdf', ()=>{})
+    })
 
     form.on('error', (err) => {
       console.log(`Error parsing form: ${err.stack}`);
@@ -14,8 +19,6 @@ function parserFormData(req) {
 
     form.on('close', () => {
       console.log('Upload completed!');
-      // res.setHeader('text/plain');
-      // res.end(`Received ${count} files`);
     });
 
     form.parse(req, (err, fields, files) => {
@@ -23,6 +26,8 @@ function parserFormData(req) {
         console.error(err);
         reject(err);
       }
+
+      console.log(files);
 
       resolve([fields, files]);
     });
