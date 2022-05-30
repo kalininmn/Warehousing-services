@@ -1,0 +1,40 @@
+.wrapper-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+  .wrapper-title {
+    margin-left: 2%;
+    margin-top: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+}
+
+.wrapper-form {
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  .form {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    .form__item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid black;
+      margin-bottom: 2%;
+      font-family: 'Roboto', sans-serif;
+      label {
+        max-width: 45%;
+      }
+      input {
+        width: 45%;
+      }
+    }
+  }
+}
