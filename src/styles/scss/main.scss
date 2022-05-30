@@ -3,6 +3,7 @@ body {
   padding-top: 160px;
   padding-left: 20%;
   display: flex;
+  font-family: 'Roboto', sans-serif;
 }
 .nav-link {
   display: flex;
@@ -90,4 +91,20 @@ body {
   min-height: calc(100vh - 160px);
   right: 0;
   background-color: cornflowerblue;
+  .wrapper-text {
+    margin-bottom: 1%;
+    .wrapper-description {
+      font-weight: bold;
+    }
+  }
+  .wrapper-list {
+    margin-bottom: 10%;
+    .list {
+      list-style: none;
+      .list__item {
+        line-height: 1.5em;
+        letter-spacing: 1px;
+      }
+    }
+  }
 }

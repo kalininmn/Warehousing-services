@@ -15,12 +15,44 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 1.2em;
-    margin-bottom: 2%;
+    margin-bottom: 1%;
   }
   .wrapper-description {
+    margin-top: 1%;
     max-width: 50%;
     align-self: center;
     font-family: 'Roboto', sans-serif;
     line-height: 1.2em;
+  }
+}
+
+.wrapper-list {
+  margin-left: 4%;
+  .list {
+    list-style: auto;
+    .item_dash:before {
+      content:  "—";
+      position: relative;
+      left:     -5px;
+    }
+    .item_dot:before {
+      content:  "•";
+      position: relative;
+      left:     -5px;
+    }
+    .list__item {
+      font-family: 'Roboto', sans-serif;
+      a {
+        display: inline-block;
+        margin-top: 2%;
+        margin-bottom: 3%;
+        padding: 2px 5px;
+        text-decoration: none;
+        color: white;
+        background: green;
+        letter-spacing: 1.5px;
+        box-shadow: 0px 0px 5px 1px black;
+      }
+    }
   }
 }
