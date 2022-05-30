@@ -1,0 +1,33 @@
+.wrapper-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+  .wrapper-title {
+    margin-left: 2%;
+    margin-top: 2%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+}
+
+.wrapper-list {
+  margin-left: 4%;
+  .list {
+    list-style: auto;
+    .list__item {
+      font-family: 'Roboto', sans-serif;
+      a {
+        display: inline-block;
+        margin-top: 2%;
+        margin-bottom: 3%;
+        padding: 2px 5px;
+        text-decoration: none;
+        color: white;
+        background: green;
+        letter-spacing: 1.5px;
+        box-shadow: 0px 0px 5px 1px black;
+      }
+    }
+  }
+}
