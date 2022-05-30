@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 global.rootPath = path.resolve(__dirname);
 const AuthenticationAPI = require('./API/AuthenticationAPI.js');
 const MainAPI = require('./API/MainAPI.js');
+const orderCallAPI = require('./API/OrderCallAPI.js');
 const TariffAPI = require('./API/TariffAPI.js');
 const AboutCompanyAPI = require('./API/AboutCompanyAPI.js');
 const PhotosAPI = require('./API/PhotosAPI.js');
@@ -32,6 +33,7 @@ app.use('/scripts', express.static(`${rootPath}/scripts`));
 
 app.use(AuthenticationAPI);
 app.use(MainAPI);
+app.use(orderCallAPI);
 app.use(TariffAPI);
 app.use(AboutCompanyAPI);
 app.use(PhotosAPI);
