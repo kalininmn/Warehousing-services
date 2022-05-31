@@ -32,13 +32,11 @@
     list-style: auto;
     .item_dash:before {
       content:  "—";
-      position: relative;
-      left:     -5px;
+      margin-right: 5px;
     }
     .item_dot:before {
       content:  "•";
-      position: relative;
-      left:     -5px;
+      margin-right: 5px;
     }
     .list__item {
       font-family: 'Roboto', sans-serif;
