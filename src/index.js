@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 global.rootPath = path.resolve(__dirname);
+const LoginAPI = require('./API/LoginAPI.js');
 const AuthenticationAPI = require('./API/AuthenticationAPI.js');
 const MainAPI = require('./API/MainAPI.js');
 const ApplicationStorageAPI = require('./API/ApplicationStorageAPI.js');
@@ -32,6 +33,7 @@ app.use('/assets', express.static(`${rootPath}/assets`));
 app.use('/utils', express.static(`${rootPath}/utils`));
 app.use('/scripts', express.static(`${rootPath}/scripts`));
 
+app.use(LoginAPI);
 app.use(AuthenticationAPI);
 app.use(MainAPI);
 app.use(ApplicationStorageAPI);
