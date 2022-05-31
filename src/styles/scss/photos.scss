@@ -7,11 +7,11 @@
   .wrapper-photo-card {
     margin: 5%;
     .photo-card {
-      max-width: 200px;
+      max-width: 300px;
       height: 300px;
-      background-color: green;
-      border: 3px solid black;
-      border-radius: 30px;
+      box-shadow: 0px 0px 5px 1px black;
+      background-color: white;
+      border-radius: 10px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -22,6 +22,8 @@
       .wrapper-text {
         height: 40%;
         overflow: hidden;
+        padding: 2%;
+        box-sizing: border-box;
       }
     }
   }

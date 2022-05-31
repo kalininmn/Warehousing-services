@@ -17,8 +17,12 @@
       <div class="wrapper-header-info">
         <div class="wrapper-logo"><img id="logo" src="#" alt="logo"></div>
         <div class="header-info">
-          <div class="wrapper-mail"><a href="">Почта</a></div>
-          <div class="wrapper-phones">телефоны</div>
+          <div class="wrapper-mail"><a href="mailto:mail@gmail.com">mail@gmail.com</a></div>
+          <hr>
+          <div class="wrapper-phones">
+            <span>987 (999) 999 99</span>
+            <span>987 (999) 999 99</span>
+          </div>
         </div>
         <div class="wrapper-header-services">
           <a href="applicationStorage" class="wrapper-application-storage nav-link nav-link_active">Заявка на хранение</a>
@@ -62,10 +66,14 @@
 
     <div class="wrapper-form">
       <form onsubmit="submitForm(event)" class="form">
-        <label for="mail">Почта</label>
-        <input id="mail" name="mail" type="mail" />
-        <label for="text">Текст</label>
-        <textarea id="text" name="text" rows="5"></textarea>
+        <div class="form__item">
+          <label for="mail">Почта</label>
+          <input id="mail" name="mail" type="mail" />
+        </div>
+        <div class="form__item">
+          <label for="text">Текст</label>
+          <textarea id="text" name="text" rows="5"></textarea>
+        </div>
         <button type="submit">Отправить</button>
       </form>
     </div>

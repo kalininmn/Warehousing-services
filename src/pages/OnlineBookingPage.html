@@ -17,8 +17,12 @@
       <div class="wrapper-header-info">
         <div class="wrapper-logo"><img id="logo" src="#" alt="logo"></div>
         <div class="header-info">
-          <div class="wrapper-mail"><a href="">Почта</a></div>
-          <div class="wrapper-phones">телефоны</div>
+          <div class="wrapper-mail"><a href="mailto:mail@gmail.com">mail@gmail.com</a></div>
+          <hr>
+          <div class="wrapper-phones">
+            <span>987 (999) 999 99</span>
+            <span>987 (999) 999 99</span>
+          </div>
         </div>
         <div class="wrapper-header-services">
           <a href="applicationStorage" class="wrapper-application-storage nav-link">Заявка на хранение</a>
@@ -57,7 +61,7 @@
       <form onsubmit="submitForm(event)" class="form">
         <div class="form__item">
           <label for="organizationName">Название организации</label>
-          <input type="text" id="organizationName" name="organizationName" />
+          <input autofocus type="text" id="organizationName" name="organizationName" />
         </div>
         <div class="form__item">
           <label for="contactPerson">Контактное лицо, должность</label>
@@ -109,7 +113,7 @@
         </div>
         <div class="form__item">
           <label for="numbersOfBox">Количество коробов на паллете, ед. (среднее, максимальное)</label>
-          <input type="text" name="numbersOfBox" id="numberOfBox" />
+          <input type="text" name="numbersOfBox" id="numbersOfBox" />
         </div>
         <div class="form__item">
           <label for="typeBox">Тип используемых паллет (евро 120х80, американская 120х120, финская 120х100)</label>
@@ -121,7 +125,7 @@
         </div>
         <div class="form__item">
           <label for="additionalServices">Необходимость в дополнительных услугах склада</label>
-          <input type="text" name="additionalServices" name="additionalServices" />
+          <input type="text" name="additionalServices" id="additionalServices" />
         </div>
 
         <button type="submit">Отправить</button>
