@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken');
+const AuthenticationService = require('../services/AuthenticationService.js');
 const TokenService = require(`${rootPath}/services/TokenService.js`);
 
 function randomString() {
@@ -70,6 +71,7 @@ class Token {
           const lastSixSymbolsAccess = String.prototype.substring
             .call(accessTokenStr, accessTokenStr.length - 6);
 
+          const userFromDBFull = await AuthenticationService.getUser(userFromJson.id);
           const refreshTokenStr = userFromDBFull.refreshToken.toString();
           const lastSixSymbolsRefresh = String.prototype.substring
             .call(refreshTokenStr, refreshTokenStr.length - 6);

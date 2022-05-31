@@ -15,6 +15,19 @@ class AuthenticationService {
       );
     });
   }
+
+  static async getUser(id) {
+    return new Promise((resolve, reject) => {
+      db.execute(
+        'SELECT * FROM users WHERE id = ?',
+        [id],
+        (error, result) => {
+          if (error) reject(error);
+          resolve(result[0]);
+        },
+      );
+    });
+  }
 }
 
 module.exports = AuthenticationService;
