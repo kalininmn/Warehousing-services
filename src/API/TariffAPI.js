@@ -2,7 +2,7 @@ const router = require(`${rootPath}/plugins/router.js`);
 const parserFormData = require(`${rootPath}/utils/parserFormData.js`);
 
 router.get('/tariff', (req, res) => {
-  res.sendFile(`${rootPath}/pages/tariffPage.html`);
+  res.sendFile(`${rootPath}/pages/TariffPage.html`);
 });
 
 router.get('/v2/tariff', (req, res) => {

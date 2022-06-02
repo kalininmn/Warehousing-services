@@ -38,7 +38,7 @@ router.post('/authentication', async (req, res) => {
       throw new Error('Incorrect Password');
     }
 
-    const acessToken = Token.generateAccessToken(userFromDB);
+    const accessToken = Token.generateAccessToken(userFromDB);
     await Token.generateRefreshToken(userFromDB);
 
     const cookieHeaders = {
@@ -47,7 +47,7 @@ router.post('/authentication', async (req, res) => {
       httpOnly: true,
     };
 
-    res.cookie('token', acessToken, cookieHeaders);
+    res.cookie('token', accessToken, cookieHeaders);
     res.sendStatus(200);
   } catch (e) {
     console.log(e);

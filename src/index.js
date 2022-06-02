@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const path = require('path');
@@ -22,7 +23,7 @@ const DocumentsAPI = require('./API/DocumentsAPI.js');
 const BenefitsAPI = require('./API/BenefitsAPI.js');
 
 const app = express();
-const port = 8082;
+const port = 80;
 
 // app.use(express.json());
 app.use(cookieParser());
