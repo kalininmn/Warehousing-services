@@ -1,18 +1,17 @@
-.wrapper-text {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10%;
-  .wrapper-title {
-    margin-left: 2%;
-    margin-top: 2%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: 1.2em;
+.wrapper-main {
+  .wrapper-list {
     margin-bottom: 2%;
   }
-  .wrapper-description {
-    max-width: 50%;
-    align-self: center;
-    font-family: 'Roboto', sans-serif;
-  }
+}
+
+.table {
+  margin-left: 4%;
+  margin-bottom: 4;
+  td, th {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+   }
+   th {
+    background: #b0e0e6; /* Цвет фона */
+   }
 }

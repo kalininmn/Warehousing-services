@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная страница</title>
+  <title>Кросс-докинг</title>
 
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/crossDocking.css">
 </head>
 <body>
@@ -16,8 +17,12 @@
       <div class="wrapper-header-info">
         <div class="wrapper-logo"><img id="logo" src="#" alt="logo"></div>
         <div class="header-info">
-          <div class="wrapper-mail"><a href="">Почта</a></div>
-          <div class="wrapper-phones">телефоны</div>
+          <div class="wrapper-mail"><a href="mailto:mail@gmail.com">mail@gmail.com</a></div>
+          <hr>
+          <div class="wrapper-phones">
+            <span>987 (999) 999 99</span>
+            <span>987 (999) 999 99</span>
+          </div>
         </div>
         <div class="wrapper-header-services">
           <a href="applicationStorage" class="wrapper-application-storage nav-link">Заявка на хранение</a>
@@ -33,7 +38,9 @@
         <a href="news" class="news-link nav-link">Новости</a>
       </div>
     </div>
-    <div class="wrapper-header-schema">тут будет карта</div>
+    <div class="wrapper-header-schema">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63827.55619941299!2d30.323040196818024!3d60.00494181525795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469633a0e6c28e89%3A0x8e697838e0bf126e!2z0JrQsNC70LjQvdC40L3RgdC60LjQuSDRgC3QvSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LM!5e0!3m2!1sru!2sru!4v1653916626819!5m2!1sru!2sru" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
   </header>
 
   <aside class="wrapper-aside">
@@ -49,11 +56,77 @@
     <div class="wrapper-text">
       <div class="wrapper-title"><h2>Кросс-докинг</h2></div>
       <div class="wrapper-description">
-        <span>Lorem ipsum dolor, 
-          sit amet consectetur adipisicing elit. 
-          Consequuntur ipsa enim perferendis eveniet pariatur aperiam quae,
-           repudiandae aliquam aut distinctio provident 
-           quibusdam blanditiis rem. Quibusdam sint minus sit nemo nam.
+        <span>
+          ООО «ВСК» оказывает достаточно новую, но популярную на отечественном рынке услугу в области
+          логистического сервиса – кросс-докинг (от англ. cross-docking) -сквозное складирование.
+          Это процесс приёмки и отгрузки грузов через склад напрямую, без размещения в зоне долговременного хранения.
+        </br>
+        </br>
+          Экономия и скорость обработки транзитных грузов в этом режиме достигается за счет оптимизации процессов приёмки,
+          комплектации и отгрузки заказов, без размещения их в зоне долговременного хранения.
+        </span>
+      </div>
+    </div>
+
+    <div class="wrapper-text">
+      <div class="wrapper-title"><h2>Кросс-Докинг – перечень услуг</h2></div>
+    </div>
+    <div class="wrapper-list">
+      <ol class="list">
+        <li class="list__item item_dot">Погрузо-разгрузочные работы</li>
+        <li class="list__item item_dot">Консолидация входящих товаров</li>
+        <li class="list__item item_dot">Распределение грузов между получателями</li>
+        <li class="list__item item_dot">Перегрузка в режиме «truck to truck»</li>
+        <li class="list__item item_dot">Перегрузка в режиме «truck to container»</li>
+        <li class="list__item item_dot">Комплектация транзитных грузов из зоны ответхранения</li>
+        <li class="list__item item_dot">Обработка товаров для ритейла в режиме «pick-by-line»</li>
+        <li class="list__item item_dot">Ответственное хранение от 1 до 3 дней – Бесплатно</li>
+      </ol>
+    </div>
+
+    <div class="wrapper-text">
+      <div class="wrapper-title"><h2>Эффективность и преимущества операций Кросс-Докинг</h2></div>
+    </div>
+    <div class="wrapper-list">
+      <ol class="list">
+        <li class="list__item item_dot">Снижение затрат на складское хранение</li>
+        <li class="list__item item_dot">Увеличение скорости обработки «in-out» потоков</li>
+        <li class="list__item item_dot">Оптимизация работы поставщиков и получателей</li>
+        <li class="list__item item_dot">Работы с большим количеством поставщиков и клиентов</li>
+        <li class="list__item item_dot">Сокращение запасов мало оборачиваемых товаров</li>
+      </ol>
+    </div>
+
+    <div class="wrapper-table">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Наименование услуги</th>
+            <th>Единица измерения</th>
+            <th>Цена</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Механический</td>
+            <td>п/м</td>
+            <td>170 рублей</td>
+          </tr>
+          <tr>
+            <td>Ручной</td>
+            <td>м3</td>
+            <td>150 рублей</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="wrapper-text">
+      <div class="wrapper-description">
+        <span>
+          Указанные расценки являются ориентировочными.
+          Для уточнения точных тарифов рекомендуется 
+          обращаться к нашим менеджерам.
         </span>
       </div>
     </div>

@@ -22,14 +22,16 @@ function createAddButton(main) {
   main.prepend(wrapperAddButton);
 
   const wrapperTariff = document.getElementsByClassName('wrapper-tariff')[0];
-  wrapperTariff.style.height = '90%';
+  wrapperTariff.style.height = 'calc(100vh - 160px - 100px)';
 }
 
 function openTariffForm() {
   const wrapperTariff = document.getElementsByClassName('wrapper-tariff')[0];
   wrapperTariff.innerHTML = `<form onsubmit="submitForm(event)" class="tariff-form">
+  <div class="form__item">
   <label for="tariff">Файл</label>
   <input id="tariff" name="tariff" type="file" accept="application/pdf"></input>
+  </div>
   <button type="submit">Обновить</button>
   </form>`;
 }

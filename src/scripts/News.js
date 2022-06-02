@@ -35,6 +35,11 @@ function createNews(main) {
   const wrapperNews = document.createElement('div');
   wrapperNews.className = 'wrapper-news';
   main.append(wrapperNews);
+
+  // const wrapperAddButton = document.getElementsByClassName('wrapper-add-button')[0];
+  // if (!!wrapperAddButton) {
+  //   wrapperNews.style.height = '90%';
+  // }
 }
 
 // Рендерит список новостей
@@ -45,7 +50,7 @@ function renderCards(cards, authenticated, main) {
     cards.forEach((card) => {
       const wrapperCard = document.createElement('div');
       wrapperCard.className = 'wrapper-card';
-      wrapperCard.innerHTML = `${ authenticated ? '<span class="edit-card">Редактировать</span>' : ''}
+      wrapperCard.innerHTML = `${ authenticated ? '<span class="edit-card"><img src="/assets/icons/pencil-outline.png" /></span>' : ''}
       <div class="card">
         <h3>${card.title}</h3>
         <hr>
@@ -69,10 +74,14 @@ function editItem(card, wrapperCard) {
   wrapperCard.querySelector('.card')
   .innerHTML = `<form onsubmit="submitForm(event)" class="news-form">
   <input type="hidden" name="id" value="${card?.id || null}"></input>
+  <div class="form__item">
   <label for="news-title">Заголовок</label>
   <input id="news-title" name="title" value="${card?.title || ''}"></input>
+  </div>
+  <div class="form__item">
   <label for="news-description">Описание</label>
   <input id="news-description" name="description" value="${card?.description || ''}"></input>
+  </div>
   <button type="submit">${card?.id ? 'Обновить' : 'Создать'}</button>
 </form>`
 }
