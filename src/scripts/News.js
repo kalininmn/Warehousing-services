@@ -1,18 +1,23 @@
+// Основной метод
 async function generateContent() {
-  const main = document.getElementsByClassName('wrapper-main')[0];
+  const main = document.getElementsByClassName('wrapper-main')[0]; // Основной контейнер
+  // Объявляем переменные
   let cards = [];
   let authenticated = false;
 
-  main.innerHTML = 'Загрузка...';
-  cards = await getCards();
-  authenticated = await checkAuthenticated();
+  main.innerHTML = 'Загрузка...'; // будет показываться на странице, пока грузятся данные
+  cards = await getCards(); // загружаем все карточки
+  authenticated = await checkAuthenticated(); // проверяем авторизован ли пользователь
   main.innerHTML = '';
 
+  // Если авторизован -- добавляем кнопку для добавления новых новостей
   if (authenticated) {
     createAddButton(main);
   }
 
+  // Создаём обёртку для карточек
   createNews(main);
+  // Отрисовываем карточки
   renderCards(cards, authenticated, main);
 }
 
@@ -35,11 +40,6 @@ function createNews(main) {
   const wrapperNews = document.createElement('div');
   wrapperNews.className = 'wrapper-news';
   main.append(wrapperNews);
-
-  // const wrapperAddButton = document.getElementsByClassName('wrapper-add-button')[0];
-  // if (!!wrapperAddButton) {
-  //   wrapperNews.style.height = '90%';
-  // }
 }
 
 // Рендерит список новостей
@@ -96,8 +96,9 @@ function createCard() {
   wrapperNews.append(wrapperCard);
 }
 
+
 /* Вспомогательные функции */
-// Удаление возможности редактирования
+// Отключение возможности редактирования
 function closeEditing() {
   document.getElementsByClassName('add-button')[0].remove();
   const allEditButtons = document.getElementsByClassName('edit-card');
@@ -106,6 +107,7 @@ function closeEditing() {
   }
 }
 
+// Обработчик формы
 async function submitForm(event) {
   event.preventDefault();
 
@@ -149,4 +151,5 @@ async function checkAuthenticated() {
 }
 /* --- */
 
+// Точка входа
 generateContent();

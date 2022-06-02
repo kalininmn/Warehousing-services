@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 const AuthenticationService = require('../services/AuthenticationService.js');
 const TokenService = require(`${rootPath}/services/TokenService.js`);
 
+// формирует "рандомную" строку
 function randomString() {
   let text = '';
   const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -22,14 +23,17 @@ class Token {
 
   static #refreshToken = null;
 
+  // Генерирует полезную нагрузку
   static async generatePayload(user) {
     Token.#payload = JSON.stringify(user).toString('base64');
   }
 
+  // Возвращает секрет из .env
   static async generateSecret() {
     Token.#secret = process.env.TOKEN_SECRET.toString('base64');
   }
 
+  // Генерирует access-токен
   static generateAccessToken(userFull) {
     const user = {
       id: userFull.id,
@@ -49,6 +53,7 @@ class Token {
     return Token.#accessToken;
   }
 
+  // Генерирует refresh-токен
   static async generateRefreshToken(userFull) {
     const accessTokenStr = Token.#accessToken.toString();
     const lastSixSymbols = String.prototype.substring.call(accessTokenStr, accessTokenStr.length - 6);
@@ -58,6 +63,7 @@ class Token {
     await TokenService.setUserRefreshToken(userFull, Token.#refreshToken);
   }
 
+  // Проверяет токен на валидность
   static async checkToken(accessTokenFromClient) {
     return jwt.verify(accessTokenFromClient, Token.#secret, async (err, decoded) => {
       let userFromJson = null;
@@ -90,6 +96,7 @@ class Token {
     });
   }
 
+  // Возвращает пользователя из токена
   static async returnUser(accessTokenFromClient) {
     const result = await Token.checkToken(accessTokenFromClient);
     const user = result?.user;

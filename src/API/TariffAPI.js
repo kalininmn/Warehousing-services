@@ -10,7 +10,7 @@ router.get('/v2/tariff', (req, res) => {
 });
 
 router.put('/v2/tariff', (req, res) => {
-  parserFormData(req, 'src/assets/tariff');
+  parserFormData(req, 'src/assets/tariff'); // Парсим тело запроса
   res.sendFile(`${rootPath}/pages/tariffPage.html`);
 });
 

@@ -1,10 +1,19 @@
+/* Импортируем все библиотеки */
 require('dotenv').config();
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const bodyParser = require('body-parser');
+/* --- */
 
+
+/* Записываем в глобальную переменную путь до текущего (корневого) файла */
+// чтобы в дальнейшем использовать переменную для составления путей.
 global.rootPath = path.resolve(__dirname);
+/* --- */
+
+
+/* Импортируем API */
 const LoginAPI = require('./API/LoginAPI.js');
 const AuthenticationAPI = require('./API/AuthenticationAPI.js');
 const MainAPI = require('./API/MainAPI.js');
@@ -21,19 +30,26 @@ const CrossDockingAPI = require('./API/CrossDockingAPI.js');
 const ServicesAPI = require('./API/ServicesAPI.js');
 const DocumentsAPI = require('./API/DocumentsAPI.js');
 const BenefitsAPI = require('./API/BenefitsAPI.js');
+/* --- */
 
+
+/* Инициализиуем приложение  */
+// Инициализируем приложение и указываем порт, на котором будет запущен сервер
 const app = express();
 const port = 80;
 
-// app.use(express.json());
-app.use(cookieParser());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+// Подключаем к приложению библиотеки
+app.use(cookieParser()); // парсит куки
+app.use(bodyParser.json()); // парсит тело запросов в формате JSON
+app.use(bodyParser.urlencoded({ extended: true })); // парсит обычное тело запроса
+
+// Указываем путь до файлов, к которым будет обращаться клиент
+// путь --> директория
 app.use('/css', express.static(`${rootPath}/styles/css`));
 app.use('/assets', express.static(`${rootPath}/assets`));
-app.use('/utils', express.static(`${rootPath}/utils`));
 app.use('/scripts', express.static(`${rootPath}/scripts`));
 
+// Подключаем к приложению API
 app.use(LoginAPI);
 app.use(AuthenticationAPI);
 app.use(MainAPI);
@@ -51,6 +67,8 @@ app.use(ServicesAPI);
 app.use(DocumentsAPI);
 app.use(BenefitsAPI);
 
+// Запускаем сервер
 app.listen(port, () => {
   console.log(`http server running on ${port} port`);
 });
+/* --- */

@@ -1,11 +1,19 @@
+// Экспортируем роутер, утилиту для работы с токеном и сервис аутентификации
 const router = require(`${rootPath}/plugins/router.js`);
 const Token = require(`${rootPath}/utils/Token.js`);
 const AuthenticationService = require(`${rootPath}/services/AuthenticationService.js`);
 
+// Описываем метод и маршрут
 router.get('/authentication', async (req, res) => {
   const { cookies } = req;
   let data = {};
 
+  /*
+    Если токен в кукисах есть -- проверяем на валидность, нет -- возвращаем false
+    --> если валиден -- возвращаем true
+    --> если протух -- продливаем токен --> формируем куку --> отдаём true с новым токеном
+    --> если токен подменили -- возвращаем false.
+  */
   if (cookies.token) {
     data = await Token.checkToken(cookies.token);
 
@@ -29,9 +37,16 @@ router.get('/authentication', async (req, res) => {
   res.send(false);
 });
 
+
+// Описываем метод и маршрут
 router.post('/authentication', async (req, res) => {
   const form = req.body;
 
+  /*
+    Проверяем пользовательские данные
+    --> не валидно -- возвращаем ошибку с сообщением "неверный пароль"
+    --> валидно -- формируем access-токен и refresh-токен --> формируем куку --> отдаём токен
+  */
   try {
     const userFromDB = await AuthenticationService.identification(form);
     if (!userFromDB) {
@@ -55,4 +70,5 @@ router.post('/authentication', async (req, res) => {
   }
 });
 
+// Экспортируем модуль
 module.exports = router;

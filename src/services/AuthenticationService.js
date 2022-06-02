@@ -1,5 +1,6 @@
 const db = require(`${rootPath}/utils/dbConnect.js`);
 
+// Запросы к БД
 class AuthenticationService {
   static async identification(data) {
     const { login, password } = data;

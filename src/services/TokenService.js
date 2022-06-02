@@ -1,5 +1,6 @@
 const db = require(`${rootPath}/utils/dbConnect.js`);
 
+// Запрос к БД
 class TokenService {
   static async setUserRefreshToken(userFull, refreshToken) {
     return new Promise((resolve, reject) => {

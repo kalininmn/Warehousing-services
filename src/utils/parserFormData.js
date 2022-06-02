@@ -2,6 +2,7 @@ const multiparty = require('multiparty');
 const path = require('path');
 const fs = require('fs');
 
+// Парсер тела запроса формата FormData
 function parserFormData(req, url) {
   return new Promise((resolve, reject) => {
     const form = new multiparty.Form({
