@@ -23,6 +23,7 @@
       }
     }
     .card {
+      color: #0f3052;
       padding: 5%;
       box-shadow: 0px 0px 5px 1px black;
       background-color: white;
@@ -36,7 +37,7 @@
         width: 50%;
         border: 0;
         height: 1px;
-        background-color: #243A73;
+        background-color: rgba(0, 0, 0, 0.5);
       }
     }
   }
