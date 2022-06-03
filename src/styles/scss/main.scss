@@ -90,6 +90,12 @@ body {
         background-color: rgba(0, 0, 0, 0.5);
         color: #FF4949;
       }
+      .nav-link_active {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #FF4949;
+        pointer-events: none;
+        cursor: default;
+      }
     }
   }
   .wrapper-header-schema {
