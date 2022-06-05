@@ -1,0 +1,16 @@
+.wrapper-photo-cards {
+  .wrapper-photo-card {
+    .photo-card {
+      max-width: 200px;
+      height: 200px;
+      .wrapper-img {
+        img {
+          object-fit: none;
+        }
+      }
+      .wrapper-text {
+        text-align: center;
+      }
+    }
+  }
+}
