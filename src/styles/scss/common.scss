@@ -1,42 +1,14 @@
-.header-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // padding-top: 2%;
-  box-sizing: border-box;
-  .wrapper-mail {
-    margin-bottom: 4%;
-    a {
-      text-decoration: none;
-      color: white;
-    }
-    a:hover {
-      color: #187498;
-    }
-  }
-  .wrapper-phones {
-    display: flex;
-    flex-direction: column;
-    span {
-      color: white;
-      letter-spacing: 2px;
-      line-height: 1.5em;
-      font-size: 0.9em;
-    }
-  }
-  hr {
-    width: 50%;
-    height: 1px;
-    border: 0;
-    background-color: white;
-  }
+button, a {
+  font-weight: bold;
 }
 
-.wrapper-header-schema {
-  iframe {
-    width: 100%;
-    height: 100%;
-  }
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }
 
 .wrapper-add-button {
@@ -50,10 +22,11 @@
     font-size: 1.1em;
     margin-left: 2%;
     cursor: pointer;
-    background-color: #00FFAB;
+    background-color: #6093ac;
+    color: #0f3052;
   }
   .add-button:hover {
-    background-color: #14C38E;
+    background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 2px 4px 2px 2px black;
   }
 }
@@ -61,7 +34,7 @@
 .wrapper-text {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10%;
+  margin-bottom: 1%;
   .wrapper-title {
     margin-left: 2%;
     margin-top: 2%;
@@ -72,7 +45,7 @@
   }
   .wrapper-description {
     margin-top: 1%;
-    max-width: 50%;
+    max-width: 80%;
     align-self: center;
     font-family: 'Roboto', sans-serif;
     line-height: 1.2em;
@@ -82,7 +55,7 @@
 .wrapper-list {
   margin-left: 4%;
   .list {
-    list-style: auto;
+    list-style: none;
     .item_dash:before {
       content:  "—";
       margin-right: 5px;
@@ -93,6 +66,8 @@
     }
     .list__item {
       font-family: 'Roboto', sans-serif;
+      line-height: 1.5em;
+      letter-spacing: 1px;
       a {
         display: inline-block;
         margin-top: 2%;
@@ -108,6 +83,43 @@
   }
 }
 
+.wrapper-photo-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  .wrapper-photo-card {
+    margin: 4%;
+    .photo-card {
+      max-width: 300px;
+      height: 300px;
+      box-shadow: 0px 0px 5px 1px black;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      .wrapper-img {
+        height: 80%;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .wrapper-text {
+        color: #0f3052;
+        height: 20%;
+        overflow: hidden;
+        padding: 2%;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
 form {
   width: 40%;
   display: flex;
@@ -116,6 +128,7 @@ form {
   box-shadow: 0px 0px 5px 1px black;
   background-color: white;
   .form__item {
+    color: #0f3052;
     border-radius: 5px;
     box-shadow: 0px 0px 2px 0px black;
     padding: 2px 5px;
@@ -130,11 +143,13 @@ form {
     box-shadow: 0px 0px 3px 0px black;
     font-size: 1.1em;
     cursor: pointer;
-    background-color: #FFCD38;
+    color: #0f3052;
+    background-color: #6093ac;
     margin-bottom: 5%;
   }
   button:hover {
-    background-color: #FF8D29;
+    color: #FF4949;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
