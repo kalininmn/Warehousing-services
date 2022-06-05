@@ -26,7 +26,8 @@ button, a {
     color: #0f3052;
   }
   .add-button:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #FF8D29;
+    font-size: 1.2em;
     box-shadow: 2px 4px 2px 2px black;
   }
 }
@@ -148,8 +149,8 @@ form {
     margin-bottom: 5%;
   }
   button:hover {
-    color: #FF4949;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #FF8D29;
+    font-size: 1.2em;
   }
 }
 
