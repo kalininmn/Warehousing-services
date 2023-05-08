@@ -5,7 +5,7 @@ const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   database: 'warehousingServices',
-  password: 'Dximankifib06',
+  password: '123',
 });
 
 // Подключение
